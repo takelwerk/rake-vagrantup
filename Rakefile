@@ -11,9 +11,8 @@ cmd_vagrantup_push = 'cd packer && ' \
     '%<target_user>s/%<target_repo>s ' \
     '%<target_version>s ' \
     'virtualbox ' \
-    'images/vbox/%<target_user>s-%<target_repo>s.box'
+    'images/vbox/package.box'
 
-# rubocop:disable Metrics/BlockLength
 namespace :vagrantup do
   desc 'Log in to app.vagrantup.com'
   task :login do
@@ -42,4 +41,3 @@ namespace :vagrantup do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
